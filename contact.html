@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href= "style.css">
+    <title>Formulário</title>
+    <style>
+        .whatsapp{position: fixed; bottom: 10px; right:10px; z-index: 9999;}
+          
+        </style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">        
+           
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <i class="bi bi-camera-fill"> Início </i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="concept.html">Conceito</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="video.html">Videografia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contato</a>
+                  </li>
+                </ul>
+              </div>           
+        </div>
+        <div class="buttons container-fluid justify-content-end">
+            <a href="https://www.instagram.com/jpssantiago/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@jpssantiago" target="_blank"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.behance.net/jpssantiago" target="_blank"><i class="bi bi-behance"></i></a>        
+            <a href="https://www.youtube.com/@joaopauloserrasantiago" target="_blank"><i class="bi bi-youtube"></i></a>
+              
+          </div>
+    </nav>
+</header>
+
+<body class="bg-whitesmoke">  
+    <section class = "container-fluid bg-whitesmoke p-2">
+      <h1 class="text-center titulos">Faça seu orçamento</h1>
+      <span class="border-secondary-subtle">
+        <form class="formulario bg-white" method="POST" action="https://formspree.io/f/xeogyojz" id="formOrcamento" autocomplete="off">
+  
+            <fieldset class="p-4">
+              <legend>Dados pessoais</legend>
+          
+              <div class="mb-3">
+                <label class="form-label" for="nome">Nome</label><br>
+                <input type="text" required class="form-control" name="nome" id="nome"><br><br>
+              </div>
+          
+              <div class="mb-3">
+                <label class="form-label" for="email">E-mail</label><br>
+                <input type="email" required name="email" placeholder="exemplo@email.com" id="email" class="form-control"><br><br>
+              </div>
+          
+              <div class="mb-3">
+                <label class="form-label" for="dataIda">Data</label><br>
+                <input type="date" name="data" class="form-control" required><br><br>
+              </div>
+            </fieldset>
+          
+            <fieldset class="p-4">
+              <legend>Detalhes do trabalho</legend>
+          
+              <div class="mb-3">
+                <label class="form-label" for="qtdPessoas">Quantidade de Pessoas</label><br>
+                <input required type="number" class="form-control" id="qtdPessoas" name="qtdPessoas"><br><br>
+              </div>
+            </fieldset>
+          
+            <fieldset class="p-4">
+              <legend>Quais serviços deseja contratar?</legend>
+          
+              <div class="form-check">
+                <label class="form-check-label" for="sessao_fotos">Sessão de Fotos</label>
+                <input type="checkbox" class="form-check-input" name="servico[]" value="sessao_fotos">
+              </div>
+          
+              <div class="form-check">
+                <label class="form-check-label" for="filmagem">Filmagem</label>
+                <input type="checkbox" class="form-check-input" name="servico[]" value="filmagem">
+              </div>
+          
+              <div class="form-check">
+                <label class="form-check-label" for="evento">Evento - Filmagem e Fotos</label>
+                <input type="checkbox" class="form-check-input" name="servico[]" value="evento">
+              </div>
+            </fieldset>
+              <fieldset>
+                <legend>Local</legend>
+          
+                <div class="form-check">
+                  <label class="form-check-label" for="ar_livre">Ao ar livre</label>
+                  <input type="checkbox" class="form-check-input" name="local[]" value="ar_livre">
+                </div>
+          
+                <div class="form-check">
+                  <label class="form-check-label" for="fechado">Local fechado</label>
+                  <input type="checkbox" class="form-check-input" name="local[]" value="fechado">
+                </div>
+              </fieldset>
+            </fieldset>
+          
+            <!-- Honeypot escondido -->
+            <div style="display:none;">
+              <label>Deixe em branco:</label>
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+          
+            <fieldset class="p-5">
+              <button type="submit" class="btn btn-dark" id="btnEnviar">Enviar</button>
+            </fieldset>
+          </form>
+          
+          <script>
+            const form = document.getElementById('formOrcamento');
+            const btn = document.getElementById('btnEnviar');
+          
+            form.addEventListener('submit', function (e) {
+              const nome = form.nome.value.trim();
+          
+              // Validação mínima de nome
+              if (nome.length < 3) {
+                alert("Por favor, insira seu nome completo.");
+                e.preventDefault();
+                return;
+              }
+          
+              // Desativa botão após envio
+              btn.disabled = true;
+              btn.innerText = 'Enviando...';
+            });
+          </script>
+          
+      </span>
+    </section>
+    
+        <div class="whatsapp">
+            <a href=" https://wa.me/5521981797874?text=Olá João 📸 vim do seu site e fiquei com dúvidas sobre o orçamento!" target="_blank">
+            <img class="container-xxl" src="IMAGEM/WHATSAPP1.png" width="75" height="75" alt="Fale conosco no WhatsApp" title="Fale conosco no WhatsApp">
+            </a>
+          </div>
+          <footer class="footer container-fluid border-top border-dark border-2 footer_box">
+
+            <div class="container text-center">
+              <div class="row">         
+               
+        
+                <div class="col-4 mt-3 container-fluid">
+                  <p class="contato">Contato</p>
+                  <p class="footer">
+                    (21) 98179-7874<br>
+                    joaopauloserrasantiago@gmail.com <br>
+                  </p> <br>
+                </div>
+        
+                <div class="col-4 container-fluid mt-3">            
+                  <p class="footer" id="servico">
+                    Fotografia e Cinematografia          
+                  </p> <br>
+                </div>
+        
+                <div class="container-fluid justify-content-end col-4 align-text-top align-items-center gap-8"><br><br><br>
+                  <a href="https://www.instagram.com/jpssantiago/" target="_blank"><img class="middle border-black rounded-3" src="IMAGEM/logo_insta.jpg" alt="Logotipo do Instagram" title="Instagram" width="auto" height="35"></a>
+                  <a href="https://www.tiktok.com/@jpssantiago" target="_blank"><img class="middle" src="IMAGEM/logo-tiktok-V.png" alt="Logotipo do TikTok" tittle="TikTok" width="auto" height="35"></img></a>
+                  <a href="https://www.behance.net/jpssantiago" target="_blank"><img class="middle" src="IMAGEM/Logotipo behance.jpg" alt="Logotipo do Behance" tittle="Behance" width="auto" height="35"></img></a>        
+                  <a href="https://www.youtube.com/@joaopauloserrasantiago" target="_blank"><img class="middle" src="IMAGEM/Youtube_logo.png" alt="Logotipo do YouTube" tittle="YouTube" width="auto" height="35"></a>
+                </div>
+                
+              </div>
+              <div class="copyright mb-3">
+                &copy; 2025 Joana Caroline Ferreira Halmenschlager - Todos os direitos reservados.
+              </div>
+            </div>       
+        
+          </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </body>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </html>
