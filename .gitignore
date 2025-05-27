@@ -1,0 +1,20 @@
+# Ignorar arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar pastas de build (se usar alguma)
+_site/
+_build/
+
+# Ignorar arquivos do editor
+.vscode/
+.idea/
+
+# NÃO IGNORAR imagens
+# (não coloque regras para ignorar *.jpg, *.png, etc)
+
+# Ignorar arquivos node_modules se usar Node.js
+node_modules/
